@@ -6,20 +6,20 @@
 class DrawableGameComponent : public GameComponent
 {
 private:
-    int x, y;
+    int x, y; // x and y coordinates for the 2D position
     enum Direction
     {
         Up,
         Down,
         Left,
         Right
-    } direction;
-    void ChangeDirection();
-    void Draw();
+    } direction;            
+    void ChangeDirection(); // Changes directions randomly
+    void Draw();            // Draws position and direction
 
 public:
-    DrawableGameComponent();
-    void Update(int time) override;
+    DrawableGameComponent();        // Constructor initialises the x,  y and direction
+    void Update(int time) override; // Overridde update function to update position and draw
 };
 
 #endif

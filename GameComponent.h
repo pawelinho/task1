@@ -1,16 +1,16 @@
 #ifndef GAMECOMPONENT_H
 #define GAMECOMPONENT_H
 
-class GameComponent
-{
+// Base class
+class GameComponent {
 protected:
-    static int instances;
-    int id;
+    static int instances; // number of instances tracker
+    int id;               // Unique ID for each component
 
 public:
-    GameComponent();
-    virtual void Update(int time);
-    virtual ~GameComponent();
+    GameComponent();      // Constructor
+    virtual void Update(int time);  // Virtual Update function
+    virtual ~GameComponent();       // Virtual destructor 
 };
 
 #endif
